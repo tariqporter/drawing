@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { connect } from 'react-redux';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import PixelateImage from './PixelateImage/PixelateImage.Container';
+import * as React from "react";
+import { connect } from "react-redux";
+// import CssBaseline from '@material-ui/core/CssBaseline';
+import PixelateImage from "./PixelateImage/PixelateImage.Container";
 
 export class App extends React.Component<any, any> {
   constructor(props: any) {
@@ -11,7 +11,7 @@ export class App extends React.Component<any, any> {
   public render() {
     return (
       <React.Fragment>
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         <div>
           <PixelateImage />
           <PixelateImage />
@@ -24,13 +24,10 @@ export class App extends React.Component<any, any> {
 
 const mapStateToProps = (state: any) => ({
   // myProperty: state.myProperty
-})
+});
 
 const mapDispatchToProps = (dispatch: any, ownProps: any) => ({
   // myFunc: () => dispatch(myFunc(ownProps.property))
-})
+});
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
